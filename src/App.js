@@ -30,8 +30,10 @@ function App() {
         setWeather(filtered);
         setCity(data.city.name);
         setQuery('');
+        setNotFoundMsg(null);
       } else if (data.cod === '404') {
         setNotFoundMsg(data.message);
+        setWeather(null);
       }
     } catch (e) {
       console.error(e);
@@ -43,18 +45,20 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <main>
-        <Search
-          query={query}
-          handleChange={handleChange}
-          handleSearch={getWeatherData}
-        />
-        {!weather && !notFoundMsg && <Loading />}
-        {notFoundMsg && <div>{notFoundMsg}</div>}
-        {weather && <Weather weather={weather} city={city} />}
-      </main>
-    </div>
+    <main className="px-4 py-6 max-w-7xl mx-auto">
+      <Search
+        query={query}
+        handleChange={handleChange}
+        handleSearch={getWeatherData}
+      />
+      {!weather && !notFoundMsg && <Loading />}
+      {notFoundMsg && (
+        <div className="w-2/3 bg-yellow-700 text-white p-4 rounded shadow">
+          Sorry, {notFoundMsg}. Try another city name.
+        </div>
+      )}
+      {weather && <Weather weather={weather} city={city} />}
+    </main>
   );
 }
 

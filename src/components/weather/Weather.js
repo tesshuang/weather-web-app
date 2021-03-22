@@ -1,12 +1,17 @@
 import DayDetail from './DayDetail';
 
 const Weather = ({ weather, city }) => {
+  console.log(weather);
   return (
     <div>
-      <h2>{city}</h2>
-      <h4>Wealther Forcast in the next 5 days</h4>
-      {weather &&
-        weather.map((day, index) => {
+      <div className="my-2 lg:mb-8 lg:mt-4">
+        <h4 className="font-semibold text-yellow-700 text-lg lg:text-2xl mb-2">
+          Wealther Forcast in the next 5 days
+        </h4>
+        <h2 className="font-bold text-4xl lg:text-5xl">{city}</h2>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        {weather.map((day, index) => {
           const days = [
             'Sunday',
             'Monday',
@@ -31,6 +36,7 @@ const Weather = ({ weather, city }) => {
             />
           );
         })}
+      </div>
     </div>
   );
 };
