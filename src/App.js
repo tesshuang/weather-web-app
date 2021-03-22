@@ -1,40 +1,42 @@
 import { useState, useEffect } from 'react';
 import Weather from './components/weather/Weather';
 
-
 function App() {
-  const [city, setCity] = useState('Vancouver');
+  const [city, setCity] = useState(null);
   const [notFoundMsg, setNotFoundMsg] = useState(null);
   const [weather, setWeather] = useState(null);
 
-  useEffect(() =>{
+  useEffect(() => {
     (async function fetchintialData() {
       await getWeatherData();
     })();
   }, []);
 
-  const getWeatherData = async() => {
+  const getWeatherData = async () => {
     try {
-      const result = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${process.env.REACT_APP_WEATHER_APP_API_KEY}&units=metric`);
+      const result = await fetch(
+        `https://api.openweathermap.org/data/2.5/forecast?q=${
+          city || 'Vancouver'
+        }&appid=${process.env.REACT_APP_WEATHER_APP_API_KEY}&units=metric`,
+      );
       const data = await result.json();
 
       if (data.cod === '200') {
         console.log(data);
-        const filtered = data.list.filter((ele, index) => index%8 === 0);
+        const filtered = data.list.filter((ele, index) => index % 8 === 0);
         setWeather(filtered);
-
+        setCity(data.city.name);
       } else if (data.cod === '404') {
         setNotFoundMsg(data.message);
       }
-      
-    } catch(e) {
+    } catch (e) {
       console.error(e);
     }
-  }
+  };
   return (
     <div className="App">
       <main>
-        <Weather weather={weather} notFoundMsg={notFoundMsg}/>
+        <Weather weather={weather} notFoundMsg={notFoundMsg} city={city} />
       </main>
     </div>
   );
