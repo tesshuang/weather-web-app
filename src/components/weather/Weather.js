@@ -1,9 +1,6 @@
 import DayDetail from './DayDetail';
 
-const Weather = ({ weather, notFoundMsg, city }) => {
-  if (notFoundMsg) return <div>{notFoundMsg}</div>;
-  console.log(weather);
-
+const Weather = ({ weather, city }) => {
   return (
     <div>
       <h2>{city}</h2>
