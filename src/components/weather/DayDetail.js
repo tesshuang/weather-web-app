@@ -9,20 +9,21 @@ const DayDetail = ({
   humidity,
 }) => (
   <div className="bg-gray-50 shadow rounded-xl py-4 px-8">
-    <div className="flex items-center justify-between md:flex-col">
+    <div className="flex items-center justify-between flex-wrap md:flex-col">
       <p className="font-semibold text-lg md:text-2xl text-yellow-700">{day}</p>
       <img
+        className="w-16 sm:w-20 md:w-30"
         src={`http://openweathermap.org/img/wn/${icon}@2x.png`}
         alt={`Weather of ${alt}`}
       />
-      <div>
-        <span className="px-2 text-lg lg:text-2xl">
+      <div className="text-lg lg:text-2xl">
+        <span className="pr-2">
           {max}
-          <span className="text-base align-text-top">°C</span>
+          <span className="text-sm sm:text-base align-top">°C</span>
         </span>
-        <span className="text-gray-500 px-2 text-lg lg:text-2xl">
+        <span className="text-gray-500 pr-2">
           {min}
-          <span className="text-base align-text-top">°C</span>
+          <span className="text-sm sm:text-base align-top">°C</span>
         </span>
       </div>
     </div>
