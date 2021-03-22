@@ -1,7 +1,6 @@
 import DayDetail from './DayDetail';
 
 const Weather = ({ weather, city }) => {
-  console.log(weather);
   return (
     <div>
       <div className="my-2 lg:mb-8 lg:mt-4">
