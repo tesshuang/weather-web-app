@@ -49,6 +49,7 @@ draft a rough design before implementing the styling code.
 
 If applicable, please provide us with the necessary instructions to run your solution.
 
+Intall the project, run `npm install`.
 Start the project, run `npm run start`.
 Build the project, run `npm run build`.
 Test the project, run `npm run test`,
