@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+## Notes
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+_Please do not supply your name or email address in this document. We're doing our best to remain unbiased._
 
-## Available Scripts
+### Date
 
-In the project directory, you can run:
+The date you're submitting this.
 
-### `yarn start`
+Submission date: March 22, 2021
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Location of deployed application
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+If applicable, please provide the url where we can find and interact with your running application.
 
-### `yarn test`
+[link to the project](https://weather-forcast-5-days.netlify.app/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Time spent
 
-### `yarn build`
+How much time did you spend on the assignment? Normally, this is expressed in hours.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+I spent around 5 hours on the project.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Assumptions made
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Use this section to tell us about any assumptions that you made when creating your solution.
 
-### `yarn eject`
+1. This web application is aimed to display weather forcast data for the next 5 days.
+2. The weather information that users usually are looking for is an icon overview, max/min temperature, wind, visibility and humidity.
+3. The default city of the forcast is Vancouver.
+4. The web application is responsive to multiple breakpoints and devices.
+5. Users can search different cities and get the weather data.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Shortcuts/Compromises made
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+If applicable. Did you do something that you feel could have been done better in a real-world application? Please
+let us know.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+It's a responsive web application that has a clean and clear user interface. It has a good amount of information for users based on the devices they are using
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Stretch goals attempted
 
-## Learn More
+If applicable, use this area to tell us what stretch goals you attempted. What went well? What do you wish you
+could have done better? If you didn't attempt any of the stretch goals, feel free to let us know why.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+I am able to complete the stretch goals as requested by using the tech stack I chose. I wish I would've done better
+draft a rough design before implementing the styling code.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Instructions to run assignment locally
 
-### Code Splitting
+If applicable, please provide us with the necessary instructions to run your solution.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Start the project, run `npm run start`.
+Build the project, run `npm run build`.
+Test the project, run `npm run test`,
 
-### Analyzing the Bundle Size
+### What did you not include in your solution that you want us to know about?
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Were you short on time and not able to include something that you want us to know
+about? Please list it here so that we know that you considered it.
 
-### Making a Progressive Web App
+1. Implement dark and light theme to the application based on users' `prefers-color-scheme`.
+2. Add the toggle for converting celcius to farenheit, or vice versa.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Other information about your submission that you feel it's important that we know if applicable.
 
-### Advanced Configuration
+### Your feedback on this technical challenge
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Have feedback for how we could make this assignment better? Please let us know.
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+It's a good code challenge to spend time on working on a real world task. I enjoy working on this project.
