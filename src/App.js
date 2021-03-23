@@ -8,6 +8,7 @@ function App() {
   const [query, setQuery] = useState('');
   const [city, setCity] = useState(null);
   const [notFoundMsg, setNotFoundMsg] = useState(null);
+  const [errMsg, setErrMsg] = useState(null);
   const [weather, setWeather] = useState(null);
 
   useEffect(() => {
@@ -26,17 +27,20 @@ function App() {
       const data = await result.json();
 
       if (data.cod === '200') {
-        const filtered = data.list.filter((ele, index) => index % 8 === 0);
-        setWeather(filtered);
+        const fiveDaysData = data.list.filter((ele, index) => index % 8 === 0);
+        setWeather(fiveDaysData);
         setCity(data.city.name);
-        setQuery('');
         setNotFoundMsg(null);
       } else if (data.cod === '404') {
         setNotFoundMsg(data.message);
         setWeather(null);
       }
+      setErrMsg(null);
+      setQuery('');
     } catch (e) {
-      console.error(e);
+      setErrMsg(e.message);
+      setNotFoundMsg(null);
+      setWeather(null);
     }
   };
 
@@ -51,7 +55,8 @@ function App() {
         handleChange={handleChange}
         handleSearch={getWeatherData}
       />
-      {!weather && !notFoundMsg && <Loading />}
+      {!weather && !notFoundMsg && !errMsg && <Loading />}
+      {errMsg && <div className="text-red-700">{errMsg}</div>}
       {notFoundMsg && (
         <div className="w-2/3 bg-yellow-700 text-white p-4 rounded shadow">
           Sorry, {notFoundMsg}. Try another city name.
